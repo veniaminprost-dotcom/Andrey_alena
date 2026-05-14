@@ -4,6 +4,7 @@
   "private": true,
   "description": "Свадебное приглашение Андрея и Алёны для Timeweb Cloud",
   "scripts": {
+    "build": "node -e \"console.log('No build step required')\"",
     "start": "node wedding-invitation/server.js"
   },
   "engines": {
