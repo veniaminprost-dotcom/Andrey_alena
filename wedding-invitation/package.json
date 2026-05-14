@@ -1,0 +1,13 @@
+{
+  "name": "andrey-alena-wedding-invitation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Свадебное приглашение Андрея и Алёны с RSVP в Telegram",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
