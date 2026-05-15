@@ -396,16 +396,40 @@ footer .script-accent {
 }
 
 .timeline__heart {
+  position: relative;
   z-index: 1;
   width: 38px;
   height: 38px;
   display: grid;
   place-items: center;
   border-radius: 50%;
-  color: var(--white);
   background: var(--dusty-rose);
-  font-size: 15px;
   box-shadow: 0 0 0 7px var(--beige-bg);
+}
+
+.timeline__heart::before,
+.timeline__heart::after {
+  content: "";
+  position: absolute;
+  background: var(--white);
+}
+
+.timeline__heart::before {
+  width: 13px;
+  height: 13px;
+  left: 12px;
+  top: 15px;
+  border-radius: 2px 2px 1px 2px;
+  transform: rotate(45deg);
+}
+
+.timeline__heart::after {
+  width: 13px;
+  height: 13px;
+  left: 12px;
+  top: 9px;
+  border-radius: 50%;
+  box-shadow: -6px 6px 0 var(--white);
 }
 
 .timeline-section.is-visible .timeline__heart {
@@ -850,6 +874,21 @@ footer p {
     width: 34px;
     height: 34px;
     box-shadow: 0 0 0 6px var(--beige-bg);
+  }
+
+  .timeline__heart::before {
+    width: 12px;
+    height: 12px;
+    left: 11px;
+    top: 14px;
+  }
+
+  .timeline__heart::after {
+    width: 12px;
+    height: 12px;
+    left: 11px;
+    top: 8px;
+    box-shadow: -6px 6px 0 var(--white);
   }
 
   .timeline time {
