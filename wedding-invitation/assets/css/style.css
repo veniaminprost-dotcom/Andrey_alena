@@ -790,9 +790,10 @@ fieldset label span {
   display: grid;
   gap: 8px;
   margin-top: 4px;
-  padding: 16px 14px;
-  border: 1px solid rgba(139, 115, 85, 0.22);
-  background: rgba(255, 250, 244, 0.86);
+  padding: 20px 16px;
+  border: 1px solid rgba(139, 115, 85, 0.3);
+  background: rgba(255, 250, 244, 0.94);
+  box-shadow: 0 12px 28px rgba(65, 54, 44, 0.08);
   text-align: center;
 }
 
@@ -838,7 +839,7 @@ fieldset label span {
 }
 
 footer {
-  padding: 44px 20px 60px;
+  padding: 28px 20px 34px;
   text-align: center;
   background: var(--white);
 }
@@ -923,6 +924,66 @@ footer p {
 }
 
 @media (max-width: 420px) {
+  .section,
+  .paper {
+    padding-block: 34px;
+  }
+
+  .countdown {
+    padding-bottom: 24px;
+  }
+
+  .timeline-section {
+    padding-top: 18px;
+    padding-bottom: 26px;
+  }
+
+  .section-title {
+    margin-top: 0;
+  }
+
+  .timeline {
+    margin-top: 8px;
+  }
+
+  .dress {
+    padding-top: 24px;
+    padding-bottom: 30px;
+  }
+
+  .details {
+    gap: 10px;
+    padding-bottom: 18px;
+  }
+
+  .rsvp {
+    padding-top: 20px;
+    padding-bottom: 24px;
+  }
+
+  .rsvp-info {
+    padding: 20px 16px;
+  }
+
+  .host {
+    margin-top: -2px;
+    padding: 28px 18px;
+  }
+
+  .location {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  footer {
+    padding-top: 22px;
+    padding-bottom: 26px;
+  }
+
+  footer .script-accent {
+    font-size: 40px;
+  }
+
   .timeline {
     padding-left: 0;
   }
