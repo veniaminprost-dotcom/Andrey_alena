@@ -173,13 +173,18 @@ textarea {
 }
 
 .hero__quote {
-  max-width: 268px;
+  max-width: 286px;
   margin: 0 auto auto;
   font-family: "Pinyon Script", "Great Vibes", cursive;
-  font-size: clamp(19px, 5.6vw, 27px);
-  line-height: 1.08;
+  font-size: clamp(16px, 4.65vw, 23px);
+  line-height: 1.02;
   transform: translateY(-10px);
   text-shadow: 0 2px 24px rgba(0, 0, 0, 0.42);
+}
+
+.hero__quote span {
+  display: block;
+  white-space: nowrap;
 }
 
 h1,
@@ -365,7 +370,7 @@ footer .script-accent {
   grid-template-columns: minmax(80px, 1fr) 38px minmax(108px, 1fr);
   gap: 12px;
   align-items: start;
-  padding: 20px 0;
+  padding: 15px 0;
   opacity: 0;
   transform: translateY(18px);
   transition: opacity 0.58s ease, transform 0.58s ease;
@@ -807,9 +812,13 @@ fieldset label span {
 }
 
 .form-status {
-  min-height: 24px;
+  min-height: 0;
   color: var(--olive-green);
   font-weight: 600;
+}
+
+.form-status:empty {
+  display: none;
 }
 
 .form-status.is-error {
@@ -936,7 +945,7 @@ footer p {
 
   .timeline-section {
     padding-top: 8px;
-    padding-bottom: 10px;
+    padding-bottom: 4px;
   }
 
   .section-title {
@@ -944,7 +953,15 @@ footer p {
   }
 
   .timeline {
-    margin-top: 2px;
+    margin-top: 0;
+  }
+
+  .timeline li {
+    padding: 10px 0;
+  }
+
+  .timeline__date {
+    padding-top: 0;
   }
 
   .dress {
@@ -960,7 +977,7 @@ footer p {
 
   .rsvp {
     padding-top: 8px;
-    padding-bottom: 12px;
+    padding-bottom: 0;
   }
 
   .rsvp-info {
@@ -968,7 +985,7 @@ footer p {
   }
 
   .host {
-    margin-top: -8px;
+    margin-top: -30px;
     padding: 22px 18px;
   }
 
