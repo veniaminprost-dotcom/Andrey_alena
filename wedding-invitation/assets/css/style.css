@@ -173,11 +173,12 @@ textarea {
 }
 
 .hero__quote {
-  max-width: 290px;
+  max-width: 268px;
   margin: 0 auto auto;
   font-family: "Pinyon Script", "Great Vibes", cursive;
-  font-size: clamp(22px, 6.5vw, 31px);
-  line-height: 1.12;
+  font-size: clamp(19px, 5.6vw, 27px);
+  line-height: 1.08;
+  transform: translateY(-10px);
   text-shadow: 0 2px 24px rgba(0, 0, 0, 0.42);
 }
 
@@ -540,8 +541,8 @@ footer .script-accent {
 
 .flower {
   position: absolute;
-  right: -8px;
-  bottom: -58px;
+  right: -18px;
+  bottom: -78px;
   width: min(42vw, 190px);
   aspect-ratio: 1;
   object-fit: cover;
@@ -652,6 +653,7 @@ footer .script-accent {
 }
 
 .detail-icon {
+  position: relative;
   display: grid;
   place-items: center;
   width: 52px;
@@ -661,6 +663,44 @@ footer .script-accent {
   color: #fff;
   background: var(--rose);
   font-size: 25px;
+}
+
+.detail-icon--heart::before,
+.detail-icon--child::before,
+.detail-icon--child::after {
+  content: "";
+  position: absolute;
+  background: var(--white);
+}
+
+.detail-icon--heart::before {
+  width: 21px;
+  height: 20px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -46%);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 17 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.5 15C7.8 14.35 1 8.55 1 4.45C1 2.25 2.62 1 4.45 1C5.9 1 7.15 1.82 8.5 3.28C9.85 1.82 11.1 1 12.55 1C14.38 1 16 2.25 16 4.45C16 8.55 9.2 14.35 8.5 15Z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 17 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.5 15C7.8 14.35 1 8.55 1 4.45C1 2.25 2.62 1 4.45 1C5.9 1 7.15 1.82 8.5 3.28C9.85 1.82 11.1 1 12.55 1C14.38 1 16 2.25 16 4.45C16 8.55 9.2 14.35 8.5 15Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.detail-icon--child::before {
+  width: 17px;
+  height: 17px;
+  top: 11px;
+  left: 18px;
+  border-radius: 50%;
+  box-shadow: 0 17px 0 3px var(--white);
+}
+
+.detail-icon--child::after {
+  width: 26px;
+  height: 11px;
+  left: 13px;
+  bottom: 11px;
+  border-radius: 0 0 14px 14px;
+  background: transparent;
+  border: 3px solid var(--white);
+  border-top: 0;
 }
 
 .details h2 {
