@@ -197,9 +197,9 @@ h2,
 
 h1 {
   margin: 0;
-  font-family: "Cormorant SC", "Cormorant", serif;
+  font-family: "Playfair Display", "Cormorant SC", serif;
   font-size: clamp(58px, 16vw, 92px);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 0.92;
   color: #fff;
   text-shadow: 0 3px 24px rgba(0, 0, 0, 0.34);
@@ -1008,12 +1008,12 @@ footer p {
   }
 
   .timeline li {
-    grid-template-columns: 68px 34px 1fr;
-    gap: 8px;
+    grid-template-columns: 58px 34px minmax(0, 1fr);
+    gap: 6px;
   }
 
   .timeline::before {
-    left: 86px;
+    left: 75px;
   }
 
   .timeline__heart {
@@ -1032,7 +1032,8 @@ footer p {
   }
 
   .timeline b {
-    font-size: 27px;
+    font-size: 26px;
+    white-space: nowrap;
   }
 }
 
