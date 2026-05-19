@@ -109,7 +109,8 @@
     const name = String(data.get("name") || "").trim();
     const phone = String(data.get("phone") || "").trim();
     const phoneDigits = phone.replace(/\D/g, "");
-    const guests = String(data.get("guests") || "Только я");
+    const guestCount = String(data.get("guestCount") || "").trim();
+    const guests = guestCount ? `${guestCount} гост.` : "Количество не указано";
 
     if (name.length < 3) {
       setStatus("Пожалуйста, укажите ФИО.", true);
@@ -127,7 +128,7 @@
       name,
       phone,
       guests,
-      guestCount: String(data.get("guestCount") || "").trim(),
+      guestCount,
       comment: String(data.get("comment") || "").trim(),
       page: location.href,
       userAgent: navigator.userAgent

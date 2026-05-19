@@ -37,7 +37,7 @@ body {
     linear-gradient(180deg, var(--beige-bg) 0%, #fbf8f2 44%, var(--cream) 100%);
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 16px;
-  line-height: 1.65;
+  line-height: 1.55;
   letter-spacing: 0;
 }
 
@@ -163,7 +163,7 @@ textarea {
   inset: 0;
   width: min(100%, 520px);
   margin: 0 auto;
-  padding: max(52px, calc(env(safe-area-inset-top) + 26px)) 22px max(64px, env(safe-area-inset-bottom));
+  padding: max(52px, calc(env(safe-area-inset-top) + 26px)) 22px max(118px, calc(env(safe-area-inset-bottom) + 108px));
   color: #fffaf2;
   text-align: center;
   display: flex;
@@ -192,9 +192,9 @@ h2,
 h1 {
   margin: 0;
   font-family: "Cormorant SC", "Cormorant", serif;
-  font-size: clamp(45px, 13vw, 72px);
+  font-size: clamp(58px, 16vw, 92px);
   font-weight: 500;
-  line-height: 1;
+  line-height: 0.92;
   color: #fff;
   text-shadow: 0 3px 24px rgba(0, 0, 0, 0.34);
 }
@@ -213,7 +213,7 @@ h1 {
 .paper {
   width: min(100% - 28px, 720px);
   margin: 0 auto;
-  padding: 54px 22px;
+  padding: 42px 20px;
 }
 
 .paper {
@@ -244,7 +244,7 @@ h1 {
 }
 
 .intro p {
-  margin: 0 auto 18px;
+  margin: 0 auto 12px;
 }
 
 .formal {
@@ -268,7 +268,7 @@ h1 {
 }
 
 h2 {
-  margin: 8px 0 20px;
+  margin: 6px 0 16px;
   font-size: clamp(31px, 9vw, 50px);
   line-height: 1.05;
 }
@@ -507,7 +507,7 @@ footer .script-accent {
   display: flex;
   justify-content: center;
   gap: clamp(5px, 1.7vw, 10px);
-  margin: 26px auto;
+  margin: 22px auto 16px;
   flex-wrap: nowrap;
 }
 
@@ -526,18 +526,22 @@ footer .script-accent {
   display: grid;
   grid-template-columns: 1fr;
   gap: 14px;
+  margin-top: 4px;
 }
 
 .dress__art > img:first-child {
-  width: 100%;
-  border-radius: 28px 28px 6px 6px;
+  width: calc(100% + 20px);
+  max-width: none;
+  margin: -10px;
+  border-radius: 18px;
+  clip-path: inset(10px round 18px);
   box-shadow: var(--shadow);
 }
 
 .flower {
   position: absolute;
-  right: -12px;
-  bottom: -34px;
+  right: -8px;
+  bottom: -58px;
   width: min(42vw, 190px);
   aspect-ratio: 1;
   object-fit: cover;
@@ -637,11 +641,11 @@ footer .script-accent {
 
 .details {
   display: grid;
-  gap: 18px;
+  gap: 12px;
 }
 
 .details article {
-  padding: 28px 22px;
+  padding: 22px 18px;
   text-align: center;
   border: 1px solid var(--line);
   background: rgba(255, 250, 244, 0.68);
@@ -660,7 +664,7 @@ footer .script-accent {
 }
 
 .details h2 {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .details p,
@@ -676,16 +680,17 @@ footer .script-accent {
   font-style: italic;
 }
 
-.details article:nth-child(2) p {
+.details article:nth-child(2) p,
+.details article:nth-child(3) p {
   color: var(--olive-green);
   font-family: "Cormorant", serif;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 form {
   display: grid;
-  gap: 14px;
-  margin-top: 18px;
+  gap: 12px;
+  margin-top: 14px;
   text-align: left;
 }
 
@@ -741,12 +746,23 @@ fieldset label span {
   color: var(--ink);
 }
 
+.rsvp-info {
+  display: grid;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 16px 14px;
+  border: 1px solid rgba(139, 115, 85, 0.22);
+  background: rgba(255, 250, 244, 0.86);
+  text-align: center;
+}
+
 .form-note,
 .form-status {
   margin: 0;
   color: var(--muted);
   text-align: center;
-  font-size: 13px;
+  font-size: 16px;
+  line-height: 1.35;
 }
 
 .form-status {
@@ -765,6 +781,20 @@ fieldset label span {
   color: var(--olive-green);
   font-weight: 700;
   text-decoration: none;
+  font-size: 24px;
+}
+
+.host {
+  width: min(100% - 28px, 720px);
+  padding: 34px 20px;
+  border: 1px solid rgba(139, 115, 85, 0.24);
+  background: rgba(255, 250, 244, 0.82);
+  box-shadow: 0 12px 28px rgba(65, 54, 44, 0.08);
+}
+
+.host p:not(.section-kicker) {
+  font-size: 19px;
+  line-height: 1.38;
 }
 
 footer {

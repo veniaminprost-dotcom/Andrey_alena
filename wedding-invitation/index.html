@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Great+Vibes&family=Cormorant:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Cormorant+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=20260515-heart-css-2">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260519-guest-edits">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -52,8 +52,7 @@
         <div class="hero__shade"></div>
         <div class="hero__content">
           <p class="hero__quote">Большие воды не могут потушить любви, и реки не зальют её...</p>
-          <h1>Андрей и Алёна</h1>
-          <time datetime="2026-07-18T11:00:00+03:00">18.07.2026</time>
+          <h1>Андрей & Алёна</h1>
         </div>
       </section>
 
@@ -83,9 +82,9 @@
         </div>
         <ol class="timeline">
           <li class="timeline__date"><time datetime="2026-07-18">18.07.2026</time><span class="timeline__heart" aria-hidden="true"></span><p><b>дата свадьбы</b></p></li>
-          <li><time>10:30</time><span class="timeline__heart" aria-hidden="true"></span><p><b>Сбор гостей</b><small>Встречаемся, обнимаемся и настраиваемся на праздник</small></p></li>
-          <li><time>11:00</time><span class="timeline__heart" aria-hidden="true"></span><p><b>Венчание</b><small>Самый трепетный и важный момент дня</small></p></li>
-          <li><time>12:00</time><span class="timeline__heart" aria-hidden="true"></span><p><b>Фуршет</b><small>Легкие закуски, напитки и первые поздравления</small></p></li>
+          <li><time>10:00</time><span class="timeline__heart" aria-hidden="true"></span><p><b>Начало служения</b><small>Собираемся в храме и готовимся к важному моменту</small></p></li>
+          <li><time>10:30</time><span class="timeline__heart" aria-hidden="true"></span><p><b>Венчание</b><small>Самый трепетный и важный момент дня</small></p></li>
+          <li><time>12:00</time><span class="timeline__heart" aria-hidden="true"></span><p><b>Кофе-брейк</b><small>Легкие закуски, напитки и первые поздравления</small></p></li>
           <li><time>15:00</time><span class="timeline__heart" aria-hidden="true"></span><p><b>Банкет</b><small>Ужин, танцы, радость и теплая программа</small></p></li>
           <li><time>21:00</time><span class="timeline__heart" aria-hidden="true"></span><p><b>Завершение</b><small>Сохраняем этот день в сердце</small></p></li>
         </ol>
@@ -96,10 +95,10 @@
         <h2>Цветовая гамма</h2>
         <p>Дорогие гости, нам будет очень приятно, если ваш наряд будет соответствовать цветовой гамме нашего торжества!</p>
         <div class="palette">
+          <span style="--tone:#8B7355" aria-label="Коричневый"></span>
           <span style="--tone:#6B7B5E" aria-label="Оливковый"></span>
           <span style="--tone:#9CAF9E" aria-label="Шалфей"></span>
           <span style="--tone:#C9B1B1" aria-label="Пыльная роза"></span>
-          <span style="--tone:#B8C5D0" aria-label="Пыльно-голубой"></span>
           <span style="--tone:#F5F1E8" aria-label="Бежевый"></span>
         </div>
         <div class="dress__art">
@@ -153,6 +152,11 @@
           <h2>Просьба</h2>
           <p>Будем очень признательны, если Вы воздержитесь от криков «Горько». Ведь поцелуй - это знак выражения чувств, и он не может быть по заказу.</p>
         </article>
+        <article>
+          <span class="detail-icon">♡</span>
+          <h2>Для гостей с детьми</h2>
+          <p>Дорогие гости, мы понимаем, что хочется приехать всей семьей, но мы бы хотели, чтобы вы на нашем празднике отдохнули и погрузились в атмосферу любви. По возможности оставьте детей дома под присмотром.</p>
+        </article>
       </section>
 
       <section class="rsvp section reveal" id="rsvp">
@@ -163,13 +167,6 @@
             <span>ФИО *</span>
             <input name="name" autocomplete="name" required placeholder="Введите ваше имя и фамилию">
           </label>
-          <fieldset>
-            <legend>Кто будет присутствовать?</legend>
-            <label><input type="radio" name="guests" value="Только я" checked> <span>Только я</span></label>
-            <label><input type="radio" name="guests" value="Я + супруг(а)"> <span>Я + супруг(а)</span></label>
-            <label><input type="radio" name="guests" value="Я + дети"> <span>Я + дети</span></label>
-            <label><input type="radio" name="guests" value="Я + семья"> <span>Я + семья</span></label>
-          </fieldset>
           <label>
             <span>Количество гостей</span>
             <input name="guestCount" inputmode="numeric" pattern="[0-9]*" placeholder="Например, 2">
@@ -183,8 +180,10 @@
             <textarea name="comment" rows="4" placeholder="Ваши пожелания или вопросы"></textarea>
           </label>
           <button class="button" type="submit">Подтвердить участие</button>
-          <p class="form-note">Пожалуйста, подтвердите свое присутствие до 1 июля, чтобы мы могли планировать нашу свадьбу наилучшим образом!</p>
-          <p class="form-note">Если у Вас появились вопросы можете связаться с нами по этому номеру: <a href="tel:+79954006223">+7 995 400 6223</a> (Андрей)</p>
+          <div class="rsvp-info">
+            <p class="form-note">Пожалуйста, подтвердите свое присутствие до 1 июля, чтобы мы могли планировать нашу свадьбу наилучшим образом!</p>
+            <p class="form-note">Если у Вас появились вопросы можете связаться с нами по этому номеру: <a href="tel:+79954006223">+7 995 400 6223</a> (Андрей)</p>
+          </div>
           <div class="form-status" role="status" aria-live="polite" data-form-status></div>
         </form>
       </section>
