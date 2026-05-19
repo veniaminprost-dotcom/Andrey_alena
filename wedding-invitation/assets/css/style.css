@@ -581,6 +581,7 @@ footer .script-accent {
 
 .time {
   display: block;
+  margin-bottom: 4px;
   color: var(--brown);
   font-family: "Cormorant", serif;
   font-size: 13px;
@@ -588,9 +589,14 @@ footer .script-accent {
   line-height: 1;
 }
 
+.timeline-item--right .time {
+  margin-bottom: 6px;
+  transform: translateY(-4px);
+}
+
 .event-name {
   display: block;
-  margin-top: 2px;
+  margin-top: 0;
   color: var(--dark-text);
   font-family: "Pinyon Script", "Great Vibes", cursive;
   font-size: clamp(28px, 8.4vw, 36px);
@@ -1213,6 +1219,11 @@ footer p {
 
   .time {
     font-size: 12px;
+  }
+
+  .timeline-item--right .time {
+    margin-bottom: 7px;
+    transform: translateY(-5px);
   }
 
   .event-name {
