@@ -197,9 +197,9 @@ h2,
 
 h1 {
   margin: 0;
-  font-family: "Playfair Display", "Cormorant SC", serif;
+  font-family: "Cormorant SC", "Cormorant", serif;
   font-size: clamp(58px, 16vw, 92px);
-  font-weight: 600;
+  font-weight: 500;
   line-height: 0.92;
   color: #fff;
   text-shadow: 0 3px 24px rgba(0, 0, 0, 0.34);
@@ -458,6 +458,168 @@ footer .script-accent {
   font-family: "Cormorant Garamond", serif;
   font-size: 15px;
   line-height: 1.35;
+}
+
+.wedding-timeline {
+  --marker-size: 22px;
+  position: relative;
+  display: grid;
+  gap: 24px;
+  width: min(100%, 330px);
+  margin: 4px auto 0;
+  padding: 2px 0 8px;
+  list-style: none;
+}
+
+.wedding-timeline::after {
+  content: "";
+  position: absolute;
+  top: 78px;
+  bottom: 17px;
+  left: 50%;
+  z-index: 0;
+  width: 2px;
+  background: #d4c5b5;
+  transform: translateX(-50%) scaleY(0);
+  transform-origin: top;
+  transition: transform 1s ease-out 0.15s;
+}
+
+.timeline-section.is-visible .wedding-timeline::after {
+  transform: translateX(-50%) scaleY(1);
+}
+
+.timeline-date-main {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  justify-items: center;
+  margin-bottom: -2px;
+  color: var(--brown);
+  line-height: 1;
+}
+
+.timeline-month,
+.timeline-year {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.timeline-year {
+  margin-top: 2px;
+}
+
+.timeline-date-heart {
+  position: relative;
+  width: 58px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  margin-top: 4px;
+}
+
+.timeline-date-heart svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: var(--brown);
+  filter: drop-shadow(0 8px 16px rgba(65, 54, 44, 0.14));
+}
+
+.timeline-date-heart span {
+  position: relative;
+  z-index: 1;
+  color: var(--white);
+  font-family: "Cormorant", serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  transform: translateY(-1px);
+}
+
+.timeline-item {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--marker-size) minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  min-height: 42px;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.58s ease, transform 0.58s ease;
+}
+
+.timeline-section.is-visible .timeline-item {
+  opacity: 1;
+  transform: none;
+}
+
+.timeline-section.is-visible .timeline-item:nth-child(3) { transition-delay: 0.12s; }
+.timeline-section.is-visible .timeline-item:nth-child(4) { transition-delay: 0.22s; }
+.timeline-section.is-visible .timeline-item:nth-child(5) { transition-delay: 0.32s; }
+.timeline-section.is-visible .timeline-item:nth-child(6) { transition-delay: 0.42s; }
+
+.timeline-content {
+  min-width: 0;
+  grid-row: 1;
+  text-align: right;
+}
+
+.timeline-item--left .timeline-content {
+  grid-column: 1;
+  text-align: right;
+}
+
+.timeline-item--right .timeline-content {
+  grid-column: 3;
+  text-align: left;
+}
+
+.time {
+  display: block;
+  color: var(--brown);
+  font-family: "Cormorant", serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.event-name {
+  display: block;
+  margin-top: 2px;
+  color: var(--dark-text);
+  font-family: "Pinyon Script", "Great Vibes", cursive;
+  font-size: clamp(28px, 8.4vw, 36px);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.timeline-marker {
+  position: relative;
+  z-index: 2;
+  grid-column: 2;
+  grid-row: 1;
+  width: var(--marker-size);
+  height: var(--marker-size);
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--beige-bg);
+}
+
+.heart-icon {
+  width: 15px;
+  height: 14px;
+  display: block;
+  fill: var(--brown);
+}
+
+.timeline-section.is-visible .timeline-marker {
+  animation: heart-pop 0.7s cubic-bezier(.2, 1.6, .4, 1) both;
 }
 
 .location,
@@ -1034,6 +1196,32 @@ footer p {
   .timeline b {
     font-size: 26px;
     white-space: nowrap;
+  }
+
+  .wedding-timeline {
+    --marker-size: 20px;
+    gap: 20px;
+    width: min(100%, 318px);
+    margin-top: 2px;
+    padding: 2px 0 6px;
+  }
+
+  .timeline-item {
+    gap: 8px;
+    min-height: 38px;
+  }
+
+  .time {
+    font-size: 12px;
+  }
+
+  .event-name {
+    font-size: clamp(25px, 7.7vw, 31px);
+  }
+
+  .heart-icon {
+    width: 13px;
+    height: 12px;
   }
 }
 
