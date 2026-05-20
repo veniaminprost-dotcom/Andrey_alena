@@ -173,10 +173,10 @@ textarea {
 }
 
 .hero__quote {
-  max-width: 286px;
+  max-width: 310px;
   margin: 0 auto auto;
   font-family: "Pinyon Script", "Great Vibes", cursive;
-  font-size: clamp(16px, 4.65vw, 23px);
+  font-size: clamp(17px, 4.9vw, 25px);
   line-height: 1.02;
   transform: translateY(-10px);
   text-shadow: 0 2px 24px rgba(0, 0, 0, 0.42);
@@ -299,6 +299,10 @@ footer .script-accent {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 6px;
+}
+
+.countdown h2 {
+  margin: 16px 0 0;
 }
 
 .timer div {
@@ -591,7 +595,7 @@ footer .script-accent {
   margin-bottom: 4px;
   color: var(--brown);
   font-family: "Cormorant", serif;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1;
 }
@@ -1225,7 +1229,7 @@ footer p {
   }
 
   .time {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .timeline-item--right .time {
