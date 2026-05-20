@@ -642,7 +642,8 @@ footer .script-accent {
 .location,
 .dress,
 .rsvp,
-.host {
+.host,
+.guest-chat {
   text-align: center;
 }
 
@@ -1013,7 +1014,8 @@ fieldset label span {
   font-size: 24px;
 }
 
-.host {
+.host,
+.guest-chat {
   width: min(100% - 28px, 720px);
   padding: 34px 20px;
   border: 1px solid rgba(139, 115, 85, 0.24);
@@ -1021,7 +1023,8 @@ fieldset label span {
   box-shadow: 0 12px 28px rgba(65, 54, 44, 0.08);
 }
 
-.host p:not(.section-kicker) {
+.host p:not(.section-kicker),
+.guest-chat p:not(.section-kicker) {
   font-size: 19px;
   line-height: 1.38;
 }
@@ -1165,6 +1168,10 @@ footer p {
 
   .host {
     margin-top: 10px;
+    padding: 22px 18px;
+  }
+
+  .guest-chat {
     padding: 22px 18px;
   }
 
